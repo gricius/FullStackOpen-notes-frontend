@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
@@ -17,7 +14,7 @@
     "start": "react-scripts start",
     "lint": "eslint . --ext .js,.jsx",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
     "server": "json-server -p3001 --watch db.json"
   },
@@ -26,6 +23,9 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "browserslist": {
     "production": [
@@ -40,9 +40,15 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-react": "^7.22.15",
+    "@testing-library/jest-dom": "^6.1.3",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.5.1",
     "eslint": "^8.50.0",
     "eslint-plugin-jest": "^27.4.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "jest-environment-jsdom": "^29.7.0",
     "json-server": "^0.17.3"
   }
 }
